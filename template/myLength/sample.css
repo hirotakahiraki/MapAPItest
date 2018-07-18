@@ -1,0 +1,21 @@
+#map {
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
+#side {
+    float: right;
+    width: 30%;
+    height: 100%;
+}
+
+#side .inner {
+    padding: 10px;
+    overflow: auto;
+}
+html, body {/* これがないと、地図が表示されない */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }

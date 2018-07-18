@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Calculate distance between two points</title>
+    <!-- 参考：http://phpjavascriptroom.com/example3.php?f=module/include/
+        ajax/gmapv3/directions/directions1.inc&ttl=%E8%A8%AD%E7%BD%AE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB -->
+    <link rel="stylesheet" type="text/css" href="sample.css" /> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+</head>
+
+    <body>
+        <h2 class='h'>Calculate distance between two points</h2>
+        <div id="floating-panel">
+            <input id="address" type="textbox" value="東京">
+            <input id="address2" type="textbox" value="六本木">
+            <input id="submit" type="button" value="Search">
+        </div>
+        <div id="map"></div>
+        <div id="side">
+            <div class="inner">
+                <p>
+                    <label for="mode">Mode：
+                        <select id="mode" name="mode">
+                            <option value="driving" selected>DRIVING（自動車）</option>
+                            <option value="bicycling">BICYCLING （自転車）</option>
+                            <option value="transit">TRANSIT（電車）</option>
+                            <option value="walking">WALKING（徒歩）</option>
+                        </select>
+                    </label>
+                </p>
+                <div class="button-group">
+                    <button id="show" class="button active">ルート表示</button>
+                    <button id="hide" class="button">ルート非表示</button>
+                </div>
+                <div id="directions_panel" style="width:100%"></div>
+            </div>
+        </div>
+        <!-- #side -->
+        <br clear="all" />
+        <script type="text/javascript" src="sample.js"></script>
+    </body>
+
+</html>
